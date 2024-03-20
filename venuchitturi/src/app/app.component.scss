@@ -1,0 +1,11 @@
+:host{
+    width: 100%;
+    height: 100%;
+    .routing-buttons{
+        display: flex;
+        gap: 10px;
+        background-color: lightpink;
+        padding: 5px;
+    }
+
+}

@@ -1,0 +1,14 @@
+<ng-container *ngIf="displayQuestions">
+<div class="question" *ngFor="let ques of questions">
+  <h3>{{ques.questionNumber}}. {{ques.question}}</h3>
+  <div *ngFor="let option of ques.options">
+    <button [ngClass]="{'selected':option.isClicked}" (click)="$$selectOption(option.uid,ques.options)" >
+      {{option.option}}</button>
+  </div>
+
+</div>
+<button (click)="$$validate()" class="submit">submit</button>
+</ng-container>
+<h1 *ngIf="!displayQuestions">
+You got {{marks}} out of 4
+</h1>

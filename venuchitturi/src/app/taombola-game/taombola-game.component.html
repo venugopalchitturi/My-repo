@@ -1,0 +1,15 @@
+<div class="board">
+    <div class="board-numbers" *ngFor="let item of boardNumbers" [ngClass]="{selected:item.isClicked}">
+        {{item.num}}
+    
+    </div>
+</div>
+
+<div class="numbeer-board">
+    <div class="display-random-number">{{randomNumber}}</div>
+    <div class="bttons">
+    <button (click)="$$generateRandomNumber()">NEXT</button>
+    <button (click)="$$audio()">Repate Audio <i class="fa-regular fa-volume-high"></i></button>
+    <button (click)="$$restart()">Restart</button>
+</div>
+</div>
